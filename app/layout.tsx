@@ -14,10 +14,25 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
+const DESCRIPTION =
+  "Find out which of the roles you applied to are already closed. Built on the a16z speedrun talent network API.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://still-open-khaki.vercel.app"),
   title: "Still Open",
-  description:
-    "Find out which of the roles you applied to are already closed. Built on the a16z speedrun talent network API.",
+  description: DESCRIPTION,
+  openGraph: {
+    title: "Still Open",
+    description: DESCRIPTION,
+    url: "/",
+    siteName: "Still Open",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Still Open",
+    description: DESCRIPTION,
+  },
 };
 
 export default function RootLayout({
