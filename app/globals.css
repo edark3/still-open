@@ -269,6 +269,9 @@ select {
   margin: 0.9rem 0 0;
   padding: 0;
   display: grid;
+  /* minmax(0,1fr), not 1fr: an auto track sizes to the longest job title and
+     pushes the track button off the right edge of the screen. */
+  grid-template-columns: minmax(0, 1fr);
   gap: 1px;
   background: var(--rule);
   border: 1px solid var(--rule);
@@ -336,6 +339,7 @@ select {
   margin: 0;
   padding: 0;
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1px;
   background: var(--rule);
   border: 1px solid var(--rule);
@@ -347,7 +351,7 @@ select {
   background: var(--card);
   padding: 0.85rem 1rem;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 0.35rem 1rem;
   align-items: start;
 }
